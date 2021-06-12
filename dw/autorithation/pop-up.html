@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АВТОРИЗАЦИЯ</title>
+    <link rel="stylesheet" href="../style/pop-up.css">
+</head>
+<body>
+    <div class="wrap">
+        <h1>Авторизация</h1>
+    
+        <h2>Войдите под своей учетной записью или <span style="color: green;">Зарегестрируйтесь</span>.</h2>
+        <div class="flex">
+            <button type="button" class="btn btn-default" data-modal="modal_1">Вход</button>
+            <button type="button" class="btn btn-success" data-modal="modal_2">Регистрация</button>
+        </div>
+    
+        <div class="overlay" data-close=""></div>
+    
+        <div id="modal_1" class="dlg-modal dlg-modal-fade">
+            <span class="closer" data-close=""></span>
+            <h3>Вход</h3>
+            <!-- <form method="GET" name="getCargo" action="http://localhost:4000/posts">
+                <input type="text" name="pointOfDeparture" placeholder="Логин" /><br/>
+                <input type="text" name="pointOfDestination" placeholder="Пароль" /><br/>
+                <input type="text" name="dateOfDepartureFrom" placeholder="Роль" /><br/>
+                <input type="submit" name="submit" value="Войти" />    
+            </form> -->
+            
+            
+            <!-- <form  action=" " autocomplete="on">
+                <h1>Log in</h1>
+                <p>
+                    <label for="username" class="uname" data-icon="u" > Ваш email или Логин </label>
+                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                </p>
+                <p>
+                    <label for="password" class="youpasswd" data-icon="p"> Ваш пароль </label>
+                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
+                </p>
+               <p class="login button">
+                    <input type="submit" value="Login" />
+                </p>
+                <p class="change_link">
+                    Not a member yet ?
+                    <a href="#tosubscribe" class="to_subscribe">Join us</a>
+                </p>
+            </form> -->
+
+            <form action="login">
+                <div class="input">
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="mail" placeholder="Email">
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-unlock"></i><input type="password" placeholder="Password">
+                  </div>
+                </div>
+                <button class='buttonInForm'>Login</button>
+            </form>
+        </div>
+        <div id="modal_2" class="dlg-modal dlg-modal-fade">
+            <span class="closer" data-close=""></span>
+            <h3>Регистрация</h3>
+            <form action="Signup">
+                <div class="input">
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="mail" placeholder="Email">
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-unlock"></i><input type="password" placeholder="Password">
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-unlock"></i><input type="password" placeholder="Again Password">
+                  </div>
+                </div>
+                <button class='buttonInForm'>Login</button>
+            </form>
+        </div>
+    </div>
+    <script>var typeAnimate = 'fade';</script>
+    <script src="autorithation.js"></script>
+</body>
+</html>

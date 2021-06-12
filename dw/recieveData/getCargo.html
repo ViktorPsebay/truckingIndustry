@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/getCargo.css">
+    <title>ПОИСК ГРУЗА</title>
+</head>
+<body>
+
+    <div class="wrap">
+        <h1>ПОИСК ГРУЗА</h1>
+    
+        <h2>Укажите параметры груза</h2>
+        
+        <div class="overlay" data-close=""></div>
+    
+
+            <form class="form1" method="GET" name="getCargo" action="http://localhost:4000/posts">
+                <div class="input">
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="pointOfDeparture" placeholder="Откуда" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="pointOfDestination" placeholder="Куда" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="dateOfDepartureFrom" placeholder="Дата от" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="dateOfDepartureTo" placeholder="Дата до" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="typeOfCargo" placeholder="Тип груза" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="number" name="weightOfCargo" placeholder="максимальный вес груза" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="number" name="volumeOfCargo" placeholder="Максимальный объем груза" /><br/>
+                  </div>
+                </div>
+                <div>
+                    <input class='buttonInForm' type="submit" name="submit" value="Получить" />
+                </div>
+                <!-- <button class='buttonInForm'>Login</button> -->
+                
+            </form>
+        </div>
+        
+    </div>
+     <div id="output"></div>
+<!--<form method="GET" name="getCargo" action="http://localhost:4000/posts">
+<input type="text" name="pointOfDeparture" placeholder="Откуда" /><br/>
+<input type="text" name="pointOfDestination" placeholder="Куда" /><br/>
+<input type="text" name="dateOfDepartureFrom" placeholder="Дата от" /><br/>
+<input type="text" name="dateOfDepartureTo" placeholder="Дата до" /><br/>
+<input type="text" name="typeOfCargo" placeholder="Тип груза" /><br/>
+<input type="number" name="weightOfCargo" placeholder="максимальный вес груза" /><br/>
+<input type="number" name="volumeOfCargo" placeholder="Максимальный объем груза" /><br/>
+<input type="submit" name="submit" value="Отправить" />
+</form> -->
+
+<script src="getCargo.js"></script>
+   
+</body>
+</html>

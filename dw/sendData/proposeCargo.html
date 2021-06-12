@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/proposeCargo.css">
+    <title>ПРЕДЛОЖИТЬ ГРУЗ</title>
+</head>
+<body>
+
+    <div class="wrap">
+        <h1>ПРЕДЛОЖИТЬ ГРУЗ</h1>
+    
+        <h2>Укажите параметры груза</h2>
+        
+        <div class="overlay" data-close=""></div>
+    
+
+            <form class="form1" method="POST" name="cargo" action="http://localhost:4000/create">
+                <div class="input">
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="pointOfDeparture" placeholder="Откуда" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="pointOfDestination" placeholder="Куда" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="dateOfDeparture" placeholder="Дата" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="cargoName" placeholder="Наименование груза" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="ownerOfCargo" placeholder="Собственник груза" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="text" name="typeOfCargo" placeholder="Тип груза" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="number" name="weightOfCargo" placeholder="Вес груза" /><br/>
+                  </div>
+                  <div class="blockinput">
+                    <i class="icon-envelope-alt"></i><input type="number" name="volumeOfCargo" placeholder="Объем груза" /><br/>
+                  </div>
+                  <input type="number" name="id" placeholder="Регистрационный номер" /><br/>
+                </div>
+                <div>
+                    <input class='buttonInForm' type="submit" name="submit" value="Отправить" />
+                </div>
+                <!-- <button class='buttonInForm'>Login</button> -->
+                
+            </form>
+        </div>
+        
+    </div>
+    <!-- <div id="output"></div>
+<form method="POST" name="cargo" action="http://localhost:4000/create">
+<input type="text" name="pointOfDeparture" placeholder="Откуда" /><br/>
+<input type="text" name="pointOfDestination" placeholder="Куда" /><br/>
+<input type="text" name="dateOfDeparture" placeholder="Дата" /><br/>
+<input type="text" name="cargoName" placeholder="Наименование груза" /><br/>
+<input type="text" name="ownerOfCargo" placeholder="Собственник груза" /><br/>
+<input type="text" name="typeOfCargo" placeholder="Тип груза" /><br/>
+<input type="number" name="weightOfCargo" placeholder="Вес груза" /><br/>
+<input type="number" name="volumeOfCargo" placeholder="Объем груза" /><br/>
+<input type="number" name="id" placeholder="Регистрационный номер" /><br/>
+<input type="submit" name="submit" value="Отправить" />
+</form> -->
+
+<script type="module" src="sendCargo.js"></script>
+   
+</body>
+</html>

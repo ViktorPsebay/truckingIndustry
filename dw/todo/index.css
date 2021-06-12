@@ -1,0 +1,150 @@
+body {
+    position: relative;
+    margin: 0;
+    background: #f5f5f5;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.application {
+    text-align: center;
+}
+
+.toDo {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    font-size: 100px;
+    font-weight: 100;
+    margin-bottom: 0;
+    color: rgba(175, 47, 47, 0.5);
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    color: #e6e6e6;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.icon::before {
+    position: relative;
+    left: 20px;
+    content: '❯';
+    font-size: 22px;
+    padding: 10px 27px 10px 27px;
+}
+
+.no_clicked {
+    color: #e6e6e6;
+}
+
+.clicked {
+    color: #737373;
+} 
+
+.input {
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+    text-align: center;
+    padding: 20px 0 20px 0;
+    color: gray;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 30px;
+}
+
+.new_task {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+
+.new_task:hover > span.span_delete {
+    background-image: url(./images/cross_hover.svg);
+}
+
+.no_checked {
+    background-image: url(./images/no_checked.svg);
+}
+
+.checked {
+    background-image: url(./images/checked.svg);
+}
+
+.strikethrough {
+    opacity: 0.3;
+    color: gray;
+    text-decoration: line-through;
+}
+
+.span_complete {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: auto 0;
+    background-repeat: no-repeat;
+}
+
+.label {
+    line-height: 2.5;
+    font-size: 28px;
+    width: 65%;
+    color: gray;
+}
+
+.span_delete {
+    width: 36px;
+    height: 36px;
+    margin: auto 0;
+    background-repeat: no-repeat;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: gray;
+    background-color: white;
+    height: 74px;
+    font-size: 18px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.a a {
+    text-decoration: none;
+    padding: 7px 8px;
+    color: gray
+}
+
+.choised {
+    border: 1px solid rgba(175, 47, 47, 0.2);
+}
+
+.clearCompleted {
+    display: none;
+}
+
+.a a:hover {
+    border: 1px solid rgba(175, 47, 47, 0.2);
+}
+
+.count_items {
+    width: 50%;
+}
+
+::-webkit-input-placeholder {
+    opacity: 0.3;
+    color:gray;
+    font-size: 30px;
+}
