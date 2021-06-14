@@ -10,6 +10,7 @@ const Post = new mongoose.Schema({
     weightOfCargo: {type: Number, required: true},
     volumeOfCargo: {type: Number, required: true},
     id: {type: Number, required: true},
+    driverName: {type: String}
 })
 
 export default mongoose.model('Post', Post);

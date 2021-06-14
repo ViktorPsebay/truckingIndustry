@@ -22,7 +22,7 @@ async function sendRequest(event){
     
 
     let commits = await response.json();
-    document.getElementById("output").innerHTML='';
+    document.getElementById("output").innerHTML='<h1>Результаты поиска:</h1>';
     for(let item of commits) {
         //let value = JSON.parse(item);
         let { 
@@ -34,7 +34,7 @@ async function sendRequest(event){
             typeOfCargo,
             weightOfCargo,
             volumeOfCargo,
-            id
+            _id
         } = item;
         if (weightOfCargo <= posts.weightOfCargo && 
             volumeOfCargo <= posts.volumeOfCargo && 
@@ -42,8 +42,10 @@ async function sendRequest(event){
             dateOfDeparture <= posts.dateOfDepartureTo && 
             pointOfDeparture === posts.pointOfDeparture &&
             pointOfDestination === posts.pointOfDestination)
-        document.getElementById("output").innerHTML+='<a href="#" class="outputCargo">владелец:' + ownerOfCargo + '; груз: ' + cargoName
-         + '; дата:' + dateOfDeparture + '; От:' + pointOfDeparture + '; До:' + pointOfDestination + '</a><br/>';
+        document.getElementById("output").innerHTML+='<div class="containerForOutput"><span id="' + 
+        _id + '" ' + 'class="outputOfCargo">владелец:' + ownerOfCargo + '; груз: ' + cargoName
+         + '; дата:' + dateOfDeparture + '; От:' + pointOfDeparture + '; До:' + pointOfDestination + 
+         '</span><button classs="buttonForBooking">Забронировать</button></div>';
     }
     
     

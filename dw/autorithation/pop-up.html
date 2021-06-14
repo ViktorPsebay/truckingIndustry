@@ -22,65 +22,47 @@
         <div id="modal_1" class="dlg-modal dlg-modal-fade">
             <span class="closer" data-close=""></span>
             <h3>Вход</h3>
-            <!-- <form method="GET" name="getCargo" action="http://localhost:4000/posts">
-                <input type="text" name="pointOfDeparture" placeholder="Логин" /><br/>
-                <input type="text" name="pointOfDestination" placeholder="Пароль" /><br/>
-                <input type="text" name="dateOfDepartureFrom" placeholder="Роль" /><br/>
-                <input type="submit" name="submit" value="Войти" />    
-            </form> -->
-            
-            
-            <!-- <form  action=" " autocomplete="on">
-                <h1>Log in</h1>
-                <p>
-                    <label for="username" class="uname" data-icon="u" > Ваш email или Логин </label>
-                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
-                </p>
-                <p>
-                    <label for="password" class="youpasswd" data-icon="p"> Ваш пароль </label>
-                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
-                </p>
-               <p class="login button">
-                    <input type="submit" value="Login" />
-                </p>
-                <p class="change_link">
-                    Not a member yet ?
-                    <a href="#tosubscribe" class="to_subscribe">Join us</a>
-                </p>
-            </form> -->
+           
 
-            <form action="login">
+            <form name="enter" method="POST" class="signin" action="http://localhost:4000/login">
                 <div class="input">
                   <div class="blockinput">
-                    <i class="icon-envelope-alt"></i><input type="mail" placeholder="Email">
+                    <i class="icon-envelope-alt"></i><input  name="username" type="mail" placeholder="Email">
                   </div>
                   <div class="blockinput">
-                    <i class="icon-unlock"></i><input type="password" placeholder="Password">
+                    <i class="icon-unlock"></i><input name="password" type="password" placeholder="Password">
                   </div>
                 </div>
-                <button class='buttonInForm'>Login</button>
+                <button name="signin" class='buttonInForm'>Login</button>
             </form>
         </div>
         <div id="modal_2" class="dlg-modal dlg-modal-fade">
             <span class="closer" data-close=""></span>
             <h3>Регистрация</h3>
-            <form action="Signup">
-                <div class="input">
+            <form method="POST" class="signup" action="http://localhost:4000/registration">
+                <div class="input registration">
                   <div class="blockinput">
-                    <i class="icon-envelope-alt"></i><input type="mail" placeholder="Email">
+                    <i class="icon-envelope-alt"></i><input name="username" type="mail" placeholder="Email">
                   </div>
                   <div class="blockinput">
-                    <i class="icon-unlock"></i><input type="password" placeholder="Password">
+                    <i class="icon-unlock"></i><input name="password" type="password" placeholder="Password">
                   </div>
                   <div class="blockinput">
-                    <i class="icon-unlock"></i><input type="password" placeholder="Again Password">
+                    <i class="icon-unlock"></i><input name="passwordAgain" type="password" placeholder="Again Password">
                   </div>
+                  <select name="role" class="blockinput">
+                    <option value="Driver">Водитель</option>
+                    <option value="Customer">Собственник груза</option> 
+                  </select>                  
                 </div>
-                <button class='buttonInForm'>Login</button>
+                <button name="registrationNewUser" class='buttonInForm'>Login</button>
             </form>
         </div>
     </div>
+    
     <script>var typeAnimate = 'fade';</script>
     <script src="autorithation.js"></script>
+    <script src="registration.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>

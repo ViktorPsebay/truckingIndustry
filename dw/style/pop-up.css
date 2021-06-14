@@ -32,7 +32,7 @@ p { line-height: 20px; color: #656565; text-align: justify; }
 .dlg-modal { width: 100%; max-width: 570px; height: 300px; opacity: 0; visibility: hidden; text-align: center; position: fixed; left: 50%; z-index: 10; padding: 35px 36px; background: #fff; border-radius: 10px; -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.85); box-shadow: 0 0 20px rgba(0,0,0,0.85); }
 .dlg-modal-fade { top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 .dlg-modal-slide { top: -20px; -webkit-transform: translate(-50%, -100%); transform: translate(-50%, -100%); visibility: visible; opacity: 1; }
-#modal_2 {height: 350px;}
+#modal_2 {height: 380px;}
 .closer { width: 40px; height: 40px; display: block; position: absolute; right: 10px; top: 10px; background: url('cross.png') no-repeat; cursor: pointer; }
 .closer:hover { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
 
@@ -124,6 +124,7 @@ p { line-height: 20px; color: #656565; text-align: justify; }
     margin-bottom: 30px;
   }
   .input{
+    
     text-align: right;
     background: #E5E7E9;
     border-radius: 5px;
@@ -131,7 +132,12 @@ p { line-height: 20px; color: #656565; text-align: justify; }
     box-shadow: inset 0 0 3px #65686E;
     border-bottom: 1px solid #FFF;
   }
-  input{
+
+  .registration{
+    height: 205px;
+  }
+
+  input, select{
     width: 260px;
     background: transparent;
     border: 0;
@@ -185,4 +191,8 @@ p { line-height: 20px; color: #656565; text-align: justify; }
   button:active{
     box-shadow: inset 0 0 5px #000;
     background: linear-gradient(to bottom, rgba(57,175,154,1) 0%,rgba(107,198,186,1) 100%); 
+  }
+
+  .signup{
+    height: 100%;
   }

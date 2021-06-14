@@ -9,7 +9,7 @@ form.submit.addEventListener("click", sendRequest);
 // обработчик нажатия
 async function sendRequest(event){
     //let currentCargo = document.getElementsByName('cargo'); 
-    alert("Введите Вес груза");
+    //alert("Введите Вес груза");
     event.preventDefault(cargo);
     let method = 'POST';
     const posts = { 
@@ -21,22 +21,20 @@ async function sendRequest(event){
         typeOfCargo: document.forms.cargo.typeOfCargo.value,
         weightOfCargo: document.forms.cargo.weightOfCargo.value,
         volumeOfCargo: document.forms.cargo.volumeOfCargo.value,
-        id: document.forms.cargo.id.value
+        id: document.forms.cargo.id.value,
+        driverName: ""
     };
     let json = JSON.stringify(posts);
-    //let owner = ;
-    //let owner = document.forms.cargo.ownerOfCargo.value;
     let header = {'Content-type': 'application/json'};
-    //const response = await fetch("http://localhost:4000/send", {method, header, json});    
+    //const response = await fetch("http://localhost:4000/send", {method, json, header});    
     let request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:4000/send");
+    request.open("POST", "http://localhost:4000/send", true);
     request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    //request.onreadystatechange = function () {
-    //         if (request.readyState == 4 && request.status == 200)
-    //             document.getElementById("output").innerHTML=request.responseText;
-    // }
-    request.send(json);
-   
+    
+    await request.send(json); 
+    request.onload = () => {
+        alert(request.response);
+    } 
     
 }
 
