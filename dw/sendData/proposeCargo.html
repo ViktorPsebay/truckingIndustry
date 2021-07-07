@@ -5,10 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/proposeCargo.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>ПРЕДЛОЖИТЬ ГРУЗ</title>
 </head>
 <body>
-
+  <div class="first-screen__header header container">
+    <p class="header__logo">DW</p>
+    <nav class="header__menu header-menu">
+        <a class="header-menu__elements" href="../userPage/userPage.html">ЛИЧНЫЙ КАБИНЕТ</a>
+        <a class="header-menu__elements" href="../index.html">ГЛАВНАЯ</a>
+        <a class="header-menu__elements" href="../recieveData/getCargo.html">ПОИСК ГРУЗА</a>
+        <a class="header-menu__elements" href="../sendData/proposeCargo.html">ПРЕДЛОЖИТЬ ГРУЗ</a>
+        <a class="header-menu__elements" href="../autorithation/pop-up.html">АВТОРИЗАЦИЯ</a>
+    </nav>
+</div>
     <div class="wrap">
         <h1>ПРЕДЛОЖИТЬ ГРУЗ</h1>
     
@@ -26,22 +36,22 @@
                     <i class="icon-envelope-alt"></i><input type="text" name="pointOfDestination" placeholder="Куда" /><br/>
                   </div>
                   <div class="blockinput">
-                    <i class="icon-envelope-alt"></i><input type="text" name="dateOfDeparture" placeholder="Дата" /><br/>
+                    <i class="icon-envelope-alt"></i><input type="text" name="dateOfDeparture" placeholder="Дата в формате: yyyy.mm.dd" /><br/>
                   </div>
                   <div class="blockinput">
                     <i class="icon-envelope-alt"></i><input type="text" name="cargoName" placeholder="Наименование груза" /><br/>
                   </div>
-                  <div class="blockinput">
+                  <!-- <div class="blockinput">
                     <i class="icon-envelope-alt"></i><input type="text" name="ownerOfCargo" placeholder="Собственник груза" /><br/>
-                  </div>
+                  </div> -->
                   <div class="blockinput">
                     <i class="icon-envelope-alt"></i><input type="text" name="typeOfCargo" placeholder="Тип груза" /><br/>
                   </div>
                   <div class="blockinput">
-                    <i class="icon-envelope-alt"></i><input type="number" name="weightOfCargo" placeholder="Вес груза" /><br/>
+                    <i class="icon-envelope-alt"></i><input type="number" name="weightOfCargo" placeholder="Вес груза, кг" /><br/>
                   </div>
                   <div class="blockinput">
-                    <i class="icon-envelope-alt"></i><input type="number" name="volumeOfCargo" placeholder="Объем груза" /><br/>
+                    <i class="icon-envelope-alt"></i><input type="number" name="volumeOfCargo" placeholder="Объем груза, куб.м." /><br/>
                   </div>
                   <input type="number" name="id" placeholder="Регистрационный номер" /><br/>
                 </div>

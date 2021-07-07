@@ -9,7 +9,7 @@ const Post = new mongoose.Schema({
     typeOfCargo: {type: String, required: true},
     weightOfCargo: {type: Number, required: true},
     volumeOfCargo: {type: Number, required: true},
-    id: {type: Number, required: true},
+    id: {type: Number},
     driverName: {type: String}
 })
 

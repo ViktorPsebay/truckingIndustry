@@ -1,6 +1,8 @@
 output.onclick = async function(event) {
-    if (event.target.getAttribute('class') !== 'buttonForBooking') return;
+    const className = event.target.getAttribute('class');
+    if (className !== 'refuseBooking') return;
     let id = event.target.previousElementSibling.id;
+ 
     let url = "http://localhost:4000/update/" + id;
     let response = await fetch(url, {});
     let commits = await response.json();
@@ -16,7 +18,7 @@ output.onclick = async function(event) {
             volumeOfCargo: commits.volumeOfCargo,
             id: commits.id,
             _id: id,
-            driverName: localStorage.getItem('userName')
+            driverName: ""
         };
         let json = JSON.stringify(posts);
 
@@ -25,13 +27,13 @@ output.onclick = async function(event) {
 
         let header = {'Content-type': 'application/json'};
         let request = new XMLHttpRequest();
-        request.open("PUT", "http://localhost:4000/update", true);
+        request.open("PUT", "http://localhost:4000/refuse", true);
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         request.setRequestHeader('authorization', token);
-        await request.send(json); 
+        request.send(json); 
         request.onload = () => {
             //if (request.status==200) return;
             alert(JSON.parse(request.response).message);
         } 
-    
-  };
+        
+}

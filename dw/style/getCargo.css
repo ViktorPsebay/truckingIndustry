@@ -106,6 +106,7 @@ p { line-height: 20px; color: #656565; text-align: justify; }
   color: #71747A;
   font-family:'Open Sans', Arial, sans-serif;
   text-shadow: 0 1px 0 #FFF;
+  text-align: start;
 }
 
   input:focus{
@@ -141,4 +142,9 @@ p { line-height: 20px; color: #656565; text-align: justify; }
 
   .containerForOutput{
     height:50px;
+  }
+
+  .redefinedWrap{
+    height: auto;
+    margin-bottom: 77px;
   }
