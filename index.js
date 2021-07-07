@@ -15,7 +15,7 @@ app.use(express.static(__dirname + "/dw"));
 
 async function start() {
     try {
-        await mongoose.connect('mongodb+srv://Viktor:@P-xQy5879YVzqs@cluster0.iz8xh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+        await mongoose.connect('mongodb+srv://Viktor:@<password>@cluster0.iz8xh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useFindAndModify: false,
             useUnifiedTopology: true
